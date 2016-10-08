@@ -7,7 +7,7 @@
     <canvas id="gameCanvas" width="360" height="480"></canvas>
     <script type="text/javascript" src="cocos2d-js-v3.11.js" charset="UTF-8"></script>
     <script type="text/javascript" src="js/title.js" charset="UTF-8"></script>
-    <script type="text/javascript" src="js/resource.js" charset="UTF-8"></script>
+    <script type="text/javascript" src="resource.js" charset="UTF-8"></script>
     <script type="text/javascript">
           window.onload = function(){
               cc.game.onStart = function(){
@@ -16,7 +16,7 @@
                    cc.view.adjustViewPort(true);
 
                   //画面の縦横比をドットで指定する  ターゲットの解像度を指定し、ゲームキャンバスをブラウザのウインドサイズに合わせる
-                  cc.view.setDesignResolutionSize(480, 568, cc.ResolutionPolicy.SHOW_ALL);
+                  cc.view.setDesignResolutionSize(360, 480, cc.ResolutionPolicy.SHOW_ALL);
                   // 表示領域がリサイズされた場合、自動的にプログラムの画面をリサイズさせる
                   cc.view.resizeWithBrowserSize(true);
 

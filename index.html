@@ -19,7 +19,8 @@
                   cc.view.setDesignResolutionSize(360, 480, cc.ResolutionPolicy.SHOW_ALL);
                   // 表示領域がリサイズされた場合、自動的にプログラムの画面をリサイズさせる
                   cc.view.resizeWithBrowserSize(true);
-
+                  
+                  cc._loaderImage = "data:res/png;base64,iVBOR....";
                   cc.LoaderScene.preload(g_resources, function () {
                        cc.director.runScene(new gamestart());
                   }, this);

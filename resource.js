@@ -1,5 +1,6 @@
 ﻿var res = {
-    background_png : "res/gi-gu.png",
+    gi-gu_png : "res/gi-gu.png",
+    background: "res/HelloWorld.png"
 };
 
 var g_resources = [];

@@ -10,11 +10,7 @@ var gamestart = cc.Layer.extend({
         	this.addChild(backgroundLayer);
         	
         	var gigu = cc.Sprite.create(res.gigu_png);
-        	gigu.sprite.attr({
-        		//座標(サイズの半分が画像の中心)
-        		x: this.width / 2,
-        		y: this.height / 2
-        	});
+        	gigu.sprite.setScale(0.5);
 		gigu.setPosition(size.width/2,size.height /2 );
         	this.addChild(gigu);
         	

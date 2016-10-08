@@ -9,9 +9,16 @@ var gamestart = cc.Layer.extend({
 		backgroundLayer.setPosition(size.width/2,size.height /2 );
         	this.addChild(backgroundLayer);
         	
-        	var backgroundLayer = cc.Sprite.create(res.gigu_png);
-		backgroundLayer.setPosition(size.width/2,size.height /2 );
-        	this.addChild(backgroundLayer);
+        	var gigu = cc.Sprite.create(res.gigu_png);
+        	gigu.sprite.attr({
+        		//座標(サイズの半分が画像の中心)
+        		x: this.width / 2,
+        		y: this.height / 2
+        	});
+		gigu.setPosition(size.width/2,size.height /2 );
+        	this.addChild(gigu);
+        	
+        	
         	
         	// タップイベントリスナーを登録する
                 cc.eventManager.addListener({

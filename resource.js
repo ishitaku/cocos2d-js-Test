@@ -1,5 +1,5 @@
 ﻿var res = {
-    gi-gu_png : "res/gi-gu.png",
+    gigu_png : "res/gi-gu.png",
     background_png: "res/HelloWorld.png",
 };
 

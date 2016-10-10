@@ -78,6 +78,7 @@ var game = cc.Layer.extend({
     },
     touchUpInsideAction:function (sender, controlEvent) {
         cc.log("touchUpInsideAction");
+        location.href = "http://www.pori2.net/js/location/1.html";
     },
     touchUpOutsideAction:function (sender, controlEvent) {
         cc.log("touchUpOutsideAction");

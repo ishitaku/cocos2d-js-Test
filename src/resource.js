@@ -3,7 +3,6 @@
     //background_png: "res/HelloWorld.png",
     button_png : "res/button.png",
     buttonback_png: "res/button_back.png",
-    
     background_png : "res/background.png",
     rock_above_png : "res/rock_above.png",
     rock_under_png : "res/rock_under.png",

@@ -566,8 +566,9 @@ function restartGame() {
   shrimp.ySpeed = 0;
   shrimp.setPosition(shrimp.getPosition().x, size.height * 0.5);
   shrimp.invulnerability = 100;
+  /*
   //bgmリスタート
   if (!audioEngine.isMusicPlaying()) {
-    //audioEngine.resumeMusic();
-  }
+    audioEngine.resumeMusic();
+  }*/
 }

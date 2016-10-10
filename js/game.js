@@ -82,9 +82,8 @@ var game = cc.Layer.extend({
     },
     touchCancelAction:function (sender, controlEvent) {
         cc.log("touchCancelAction");
-    }
-        
     },
+    
     update:function(dt){
       //background・その他のscrollメソッドを呼び出す
         background.scroll();

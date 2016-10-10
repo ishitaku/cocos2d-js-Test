@@ -568,6 +568,6 @@ function restartGame() {
   shrimp.invulnerability = 100;
   //bgmリスタート
   if (!audioEngine.isMusicPlaying()) {
-    audioEngine.resumeMusic();
+    //audioEngine.resumeMusic();
   }
 }

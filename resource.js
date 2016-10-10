@@ -31,12 +31,6 @@
     button1_png : "res/title_button_pressed.png",
     button2_png : "res/replay_button.png",
     button3_png : "res/replay_button_pressed.png",
-    bgm_title : "res/bgm_title.mp3",
-    bgm_main : "res/bgm_main.mp3",
-    se_death : "res/Death.mp3",
-    se_decide : "res/se_decide.mp3",
-    se_flee : "res/se_flee1.mp3",
-    se_surprise : "res/se_surprise.mp3",
     particle_png : "res/particle_texture.png",
     particle2_png : "res/particle2_texture.png",
 };

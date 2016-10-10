@@ -154,13 +154,13 @@ var gameScene = cc.Scene.extend({
         gameLayer = new game();
         gameLayer.init();
         this.addChild(gameLayer);
-
+/*
         //音楽再生エンジン
     audioEngine = cc.audioEngine;
     //bgm再生
     if (!audioEngine.isMusicPlaying()) {
       audioEngine.playMusic(res.bgm_main, true);
-    }
+    }*/
     }
 });
 
@@ -457,10 +457,12 @@ var Coral_under = cc.Sprite.extend({
     //rectIntersectsRectは２つの矩形が交わっているかチェックする
     if (cc.rectIntersectsRect(shrimpBoundingBox, coralBoundingBox) && shrimp.invulnerability == 0) {
       gameLayer.removeCoral(this); //を削除する
+      /*
       //ボリュームを上げる
       audioEngine.setEffectsVolume(audioEngine.getEffectsVolume() + 0.3);
       //効果音を再生する
       audioEngine.playEffect(res.se_death);
+      */
       life--;
       lifeText.setString("LIFE : " + life);
       if(life < 1){
@@ -497,10 +499,12 @@ var Coral_above = cc.Sprite.extend({
     //rectIntersectsRectは２つの矩形が交わっているかチェックする
     if (cc.rectIntersectsRect(shrimpBoundingBox, coralBoundingBox) && shrimp.invulnerability == 0) {
       gameLayer.removeCoral(this); //を削除する
+      /*
       //ボリュームを上げる
       audioEngine.setEffectsVolume(audioEngine.getEffectsVolume() + 0.3);
       //効果音を再生する
       audioEngine.playEffect(res.se_death);
+      */
       life--;
       lifeText.setString("LIFE : " + life);
       if(life < 1){
@@ -539,11 +543,13 @@ var Item = cc.Sprite.extend({
 		//rectIntersectsRectは２つの矩形が交わっているかチェックする
     if (cc.rectIntersectsRect(shrimpBoundingBox, itemBoundingBox) ) {
       gameLayer.removeCoral(this);//アイテムを削除する
+      /*
       //ボリュームを上げる
       audioEngine.setEffectsVolume(audioEngine.getEffectsVolume() + 0.3);
       //効果音を再生する
       audioEngine.playEffect(res.se_decide);
-
+      */
+      
       //スコア追加処理
       score += 5;
       scoreText.setString("SCORE : " + score);

@@ -17,7 +17,15 @@ var gameover = cc.Layer.extend({
         var label02 = cc.Sprite.create(res.button3_png);　
         label02.setPosition(size.width / 2, size.height * 0.15);　
         this.addChild(label02);
-
+        
+        //ボタン
+                //ボタンの背景
+        var bgButton = new cc.Scale9Sprite(res.button_png);
+        var bgHighlightedButton = new cc.Scale9Sprite(res.buttonback_png);
+ 
+        //ボタンのラベル
+        var title = new cc.LabelTTF("Button", "Marker Felt", 30);
+        title.color = cc.color(159, 168, 176);
         scoreText = cc.LabelTTF.create("SCORE : " +score ,"Arial","30",cc.TEXT_ALIGNMENT_CENTER);
         this.addChild(scoreText);
         scoreText.setPosition(220,220);

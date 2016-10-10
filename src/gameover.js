@@ -24,15 +24,6 @@ var gameover = cc.Layer.extend({
         scoreText.setColor(cc.color(250, 250, 0, 255));
         this.reorderChild(scoreText, 10);
 
-                //ボタン
-                //ボタンの背景
-        var bgButton = new cc.Scale9Sprite(res.button_png);
-        var bgHighlightedButton = new cc.Scale9Sprite(res.buttonback_png);
- 
-        //ボタンのラベル
-        var title = new cc.LabelTTF("Button", "Marker Felt", 30);
-        title.color = cc.color(159, 168, 176);
- 
         //ボタン
         var button = new cc.ControlButton(title, bgButton);
         button.setBackgroundSpriteForState(bgHighlightedButton, cc.CONTROL_STATE_HIGHLIGHTED);
@@ -51,6 +42,36 @@ var gameover = cc.Layer.extend({
         button.addTargetWithActionForControlEvents(this, this.touchCancelAction, cc.CONTROL_EVENT_TOUCH_CANCEL);
  
         this.addChild(button);
+
+        return true;
+    },
+      touchDownAction:function (sender, controlEvent) {
+        cc.log("touchDownAction");
+        
+    },
+    touchDragInsideAction:function (sender, controlEvent) {
+        cc.log("touchDragInsideAction");
+    },
+    touchDragOutsideAction:function (sender, controlEvent) {
+        cc.log("touchDragOutsideAction");
+    },
+    touchDragEnterAction:function (sender, controlEvent) {
+        cc.log("touchDragEnterAction");
+    },
+    touchDragExitAction:function (sender, controlEvent) {
+        cc.log("touchDragExitAction");
+    },
+    touchUpInsideAction:function (sender, controlEvent) {
+        cc.log("touchUpInsideAction");
+        location.href = "https://www.google.co.jp/";
+    },
+    touchUpOutsideAction:function (sender, controlEvent) {
+        cc.log("touchUpOutsideAction");
+    },
+    touchCancelAction:function (sender, controlEvent) {
+        cc.log("touchCancelAction");
+    },
+    
 });
 
 var GameOverScene = cc.Scene.extend({

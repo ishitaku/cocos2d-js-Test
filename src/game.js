@@ -191,15 +191,7 @@ var game = cc.Layer.extend({
                     onTouchMoved: this.onTouchMoved,
                     onTouchEnded: this.onTouchEnded
                 }, this);
-	},
-	onTouchBegan: function(touch, event) {
-	shrimp.engineOn = true;
-        return true;
-      },
-      onTouchMoved: function(touch, event) {},
-      onTouchEnded: function(touch, event) {
-        shrimp.engineOn = false;
-      }
+	
 
         //スクロールする背景スプライトをインスタンス　スクロール速度:scrollSpeed
         background = new ScrollingBG();
@@ -290,7 +282,15 @@ var game = cc.Layer.extend({
     removeCoral: function(coral) {
       this.removeChild(coral);
     },
-
+    onTouchBegan: function(touch, event) {
+	shrimp.engineOn = true;
+        return true;
+      },
+      onTouchMoved: function(touch, event) {},
+      onTouchEnded: function(touch, event) {
+        shrimp.engineOn = false;
+      },
+    
 });
 //スクロール移動する背景クラス
 var ScrollingBG = cc.Sprite.extend({

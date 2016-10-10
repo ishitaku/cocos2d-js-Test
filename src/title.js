@@ -8,6 +8,8 @@ var gamestart = cc.Layer.extend({
 		backgroundLayer.setPosition(size.width/2,size.height /2 );
         	this.addChild(backgroundLayer);
         	
+        	console.log(res.shrimp0_png);
+        	
         	var gigu = cc.Sprite.create(res.gigu_png);
         	gigu.setScale(0.5);
 		gigu.setPosition(size.width/2,size.height /2 );

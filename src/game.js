@@ -526,7 +526,7 @@ var Coral_above = cc.Sprite.extend({
       life--;
       lifeText.setString("LIFE : " + life);
       if(life < 1){
-        audioEngine.stopMusic();
+        //audioEngine.stopMusic();
         gameover.score = score;
         cc.director.runScene(new gameover());
       }

@@ -219,14 +219,14 @@ var game = cc.Layer.extend({
         scoreText.setPosition(220,540);
         scoreText.setColor(cc.color(0, 0, 0, 255));
         this.reorderChild(scoreText, 10);
-
+/*
         //パーティクル設定
         emitter = cc.ParticleMeteor.create();
         this.addChild(emitter, 1);
         var myTexture = cc.textureCache.addImage(res.particle_png);
         emitter.setTexture(myTexture);
         emitter.setStartSize(20);
-        emitter.setEndSize(30);
+        emitter.setEndSize(30);*/
 /*
         emitter2 = cc.ParticleMeteor.create();
         this.addChild(emitter2, 1);

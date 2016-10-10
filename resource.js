@@ -31,8 +31,6 @@
     button1_png : "res/title_button_pressed.png",
     button2_png : "res/replay_button.png",
     button3_png : "res/replay_button_pressed.png",
-    particle_png : "res/particle_texture.png",
-    particle2_png : "res/particle2_texture.png",
 };
 
 var g_resources = [];

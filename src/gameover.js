@@ -24,25 +24,33 @@ var gameover = cc.Layer.extend({
         scoreText.setColor(cc.color(250, 250, 0, 255));
         this.reorderChild(scoreText, 10);
 
-        // タップイベントリスナーを登録する
-                cc.eventManager.addListener({
-                    event: cc.EventListener.TOUCH_ONE_BY_ONE,
-                    swallowTouches: true,
-                    onTouchBegan: this.onTouchBegan,
-                    onTouchMoved: this.onTouchMoved,
-                    onTouchEnded: this.onTouchEnded
-                }, this);
-
-        return true;
-    },
-      onTouchBegan: function(touch, event) {
-        return true;
-      },
-      onTouchMoved: function(touch, event) {},
-      onTouchEnded: function(touch, event) {
-        // 次のシーンに切り替える
-        cc.director.runScene(new gamestart());
-      },
+                //ボタン
+                //ボタンの背景
+        var bgButton = new cc.Scale9Sprite(res.button_png);
+        var bgHighlightedButton = new cc.Scale9Sprite(res.buttonback_png);
+ 
+        //ボタンのラベル
+        var title = new cc.LabelTTF("Button", "Marker Felt", 30);
+        title.color = cc.color(159, 168, 176);
+ 
+        //ボタン
+        var button = new cc.ControlButton(title, bgButton);
+        button.setBackgroundSpriteForState(bgHighlightedButton, cc.CONTROL_STATE_HIGHLIGHTED);
+        button.setTitleColorForState(cc.color.WHITE, cc.CONTROL_STATE_HIGHLIGHTED);
+        button.setPosition(size.width / 2, size.height / 2);
+        button.zoomOnTouchDown = false;
+ 
+        //イベント
+        button.addTargetWithActionForControlEvents(this, this.touchDownAction, cc.CONTROL_EVENT_TOUCH_DOWN);
+        button.addTargetWithActionForControlEvents(this, this.touchDragInsideAction, cc.CONTROL_EVENT_TOUCH_DRAG_INSIDE);
+        button.addTargetWithActionForControlEvents(this, this.touchDragOutsideAction, cc.CONTROL_EVENT_TOUCH_DRAG_OUTSIDE);
+        button.addTargetWithActionForControlEvents(this, this.touchDragEnterAction, cc.CONTROL_EVENT_TOUCH_DRAG_ENTER);
+        button.addTargetWithActionForControlEvents(this, this.touchDragExitAction, cc.CONTROL_EVENT_TOUCH_DRAG_EXIT);
+        button.addTargetWithActionForControlEvents(this, this.touchUpInsideAction, cc.CONTROL_EVENT_TOUCH_UP_INSIDE);
+        button.addTargetWithActionForControlEvents(this, this.touchUpOutsideAction, cc.CONTROL_EVENT_TOUCH_UP_OUTSIDE);
+        button.addTargetWithActionForControlEvents(this, this.touchCancelAction, cc.CONTROL_EVENT_TOUCH_CANCEL);
+ 
+        this.addChild(button);
 });
 
 var GameOverScene = cc.Scene.extend({

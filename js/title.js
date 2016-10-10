@@ -1,5 +1,4 @@
 ﻿
-
 var gamestart = cc.Layer.extend({
 	ctor: function() {
 		this._super();
@@ -34,4 +33,14 @@ var gamestart = cc.Layer.extend({
       },
 	
 });
+
+var GameStartScene = cc.Scene.extend({
+    onEnter: function() {
+        this._super();
+
+        var layer1 = new gamestart();
+        this.addChild(layer1);
+    }
+});
+
 

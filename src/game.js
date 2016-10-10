@@ -409,9 +409,9 @@ var Shrimp = cc.Sprite.extend({
       if(ebiflg == 4) ebiflg = 0;
       this.initWithFile(ebiArray[ebiflg]);
       this.ySpeed += gameThrust;
-      emitter.setPosition(this.getPosition().x - 25, this.getPosition().y);
+      //emitter.setPosition(this.getPosition().x - 25, this.getPosition().y);
     }else {
-      emitter.setPosition(this.getPosition().x - 250, this.getPosition().y);
+      //emitter.setPosition(this.getPosition().x - 250, this.getPosition().y);
    }
     //無敵モード中の視覚効果
     if (this.invulnerability > 0) {

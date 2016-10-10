@@ -1,8 +1,8 @@
 ﻿var res = {
     gigu_png : "res/gi-gu.png",
-    background_png: "res/HelloWorld.png",
+    //background_png: "res/HelloWorld.png",
     button_png : "res/button.png",
-    //buttonback_png: "res/button_back.png",
+    buttonback_png: "res/button_back.png",
     
     background_png : "res/background.png",
     rock_above_png : "res/rock_above.png",

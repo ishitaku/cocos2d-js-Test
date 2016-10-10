@@ -2,6 +2,8 @@
 var score;
 var life;
 var gameLayer;
+var scrollSpeed = 1;
+
 
 var gameScene = cc.Scene.extend({
     onEnter:function () {

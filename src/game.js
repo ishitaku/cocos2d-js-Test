@@ -171,7 +171,7 @@ var game = cc.Layer.extend({
         // mylabel = cc.LabelTTF.create("GO!", "Arial", "32");
         // mylabel.setPosition(size.width / 2, size.height / 2);
         // this.addChild(mylabel);
-
+/*
         //エビちゃんを操作
    cc.eventManager.addListener({
            event: cc.EventListener.MOUSE,
@@ -181,7 +181,25 @@ var game = cc.Layer.extend({
            onMouseUp: function(event){
                shrimp.engineOn = false;
            }
-       },this)
+       },this)*/
+       
+       // タップイベントリスナーを登録する
+                cc.eventManager.addListener({
+                    event: cc.EventListener.TOUCH_ONE_BY_ONE,
+                    swallowTouches: true,
+                    onTouchBegan: this.onTouchBegan,
+                    onTouchMoved: this.onTouchMoved,
+                    onTouchEnded: this.onTouchEnded
+                }, this);
+	},
+	onTouchBegan: function(touch, event) {
+	shrimp.engineOn = true;
+        return true;
+      },
+      onTouchMoved: function(touch, event) {},
+      onTouchEnded: function(touch, event) {
+        shrimp.engineOn = false;
+      },
 
         //スクロールする背景スプライトをインスタンス　スクロール速度:scrollSpeed
         background = new ScrollingBG();
